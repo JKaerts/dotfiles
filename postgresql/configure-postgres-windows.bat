@@ -1,2 +1,0 @@
-rename "C:\Program Files\PostgreSQL\11\data\pg_hba.conf" "pg_hba.conf.backup"
-gawk -E hba_edits.awk "C:\Program Files\PostgreSQL\11\data\pg_hba.conf.backup" >> "C:\Program Files\PostgreSQL\11\data\pg_hba.conf"
