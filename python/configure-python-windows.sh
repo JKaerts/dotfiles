@@ -1,10 +1,10 @@
 # Installing required packages
-pip install --user numpy ^
-scipy ^
-matplotlib ^
-ipython ^
-pandas ^
-sympy ^
+pip install --user numpy \
+scipy \
+matplotlib \
+ipython \
+pandas \
+sympy \
 nose
 
 pip install --user scikit-image
