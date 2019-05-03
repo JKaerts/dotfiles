@@ -1,4 +1,4 @@
-REM Installing required packages
+# Installing required packages
 pip install --user numpy ^
 scipy ^
 matplotlib ^
@@ -17,7 +17,7 @@ pip install --user pygments
 
 pip install --user pycodestyle
 
-REM create default ipython profile and edit config
+# create default ipython profile and edit config
 ipython profile create
 sed -i.backup 's/^#c\.InteractiveShellApp\.exec_lines = \[\]/c\.InteractiveShellApp\.exec_lines = \["import sympy as sp", "import numpy as np"\]/' ^
 %HOME%\.ipython\profile_default\ipython_config.py
