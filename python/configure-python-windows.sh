@@ -1,4 +1,12 @@
-# Installing required packages
+# Setting up a python install
+
+# A standard Anaconda install is too big for me.
+# I don't use python for a living so I just need
+# a setup for playing around with. This setup
+# consists of the scipy stack and some helper
+# packages for managing my code.
+
+# Installing the Scipy stack
 pip install --user numpy \
                    scipy \
                    matplotlib \
@@ -7,15 +15,18 @@ pip install --user numpy \
                    sympy \
                    nose
 
-pip install --user scikit-image
+# Some auxiliary scientific packages
+pip install --user scikit-image \
+                   jupyter
 
-pip install --user jupyter
+# These packages are useful for working with python code
+# or for interfacing with i.e. TeX.
+pip install --user pygments \
+                   pycodestyle \
+                   mypy
 
+# Youtube-dl allows you to download videos from streaming sites.
 pip install --user youtube-dl
-
-pip install --user pygments
-
-pip install --user pycodestyle
 
 # create default ipython profile and edit config
 ipython profile create
