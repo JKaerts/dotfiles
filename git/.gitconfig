@@ -37,5 +37,7 @@
   filetrail = log --follow -p -w
   mergetrail = log --ancestry-path --merges
   unmerged = diff --name-only --diff-filter=U
+[commit]
+    template=~/.gitmessage
 [credential]
 	helper = manager
