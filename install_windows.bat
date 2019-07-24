@@ -8,3 +8,6 @@ mklink /H %HOME%\.gitmessage git\.gitmessage
 
 REM Cygwin
 mklink /H %HOME%\.minttyrc cygwin\.minttyrc
+
+REM Vim
+mklink /H %HOME%\.vimrc vim\.vimrc
