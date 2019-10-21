@@ -7,13 +7,8 @@
 # packages for managing my code.
 
 # Installing the Scipy stack
-pip install --user numpy \
-                   scipy \
-                   matplotlib \
-                   ipython \
-                   pandas \
-                   sympy \
-                   nose
+SCIPY_STACK="numpy scipy matplotlib ipython pandas sympy nose"
+pip install --user $SCIPY_STACK
 
 # Some auxiliary scientific packages
 pip install --user scikit-image \
