@@ -11,17 +11,18 @@ SCIPY_STACK="numpy scipy matplotlib ipython pandas sympy nose"
 pip install --user $SCIPY_STACK
 
 # Some auxiliary scientific packages
-pip install --user scikit-image \
-                   jupyter
+MISC_SCIENTIFIC="scikit-image jupyter"
+pip install --user $MISC_SCIENTIFIC
 
 # These packages are useful for working with python code
 # or for interfacing with i.e. TeX.
-pip install --user pygments \
-                   pycodestyle \
-                   mypy
+CODE_ANALYSIS="pycodestyle pylint mypy"
+INTERFACING=pygments
+pip install --user $CODE_ANALYSIS $INTERFACING
 
 # Youtube-dl allows you to download videos from streaming sites.
-pip install --user youtube-dl
+EXTRA=youtube-dl
+pip install --user $EXTRA
 
 # create default ipython profile and edit config
 ipython profile create
