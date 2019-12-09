@@ -16,7 +16,7 @@ pip install --user $MISC_SCIENTIFIC
 
 # These packages are useful for working with python code
 # or for interfacing with i.e. TeX.
-CODE_ANALYSIS="pycodestyle pylint mypy"
+CODE_ANALYSIS="pycodestyle pylint mypy pytest coverage"
 INTERFACING=pygments
 pip install --user $CODE_ANALYSIS $INTERFACING
 
