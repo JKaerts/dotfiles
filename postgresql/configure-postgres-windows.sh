@@ -1,2 +1,0 @@
-mv /cygdrive/c/Program\ Files/PostgreSQL/11/data/pg_hba.conf /cygdrive/c/Program\ Files/PostgreSQL/11/data/pg_hba.conf.backup
-gawk -E hba_edits.awk /cygdrive/c/Program\ Files/PostgreSQL/11/data/pg_hba.conf.backup >> /cygdrive/c/Program\ Files/PostgreSQL/11/data/pg_hba.conf
