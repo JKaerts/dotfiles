@@ -43,8 +43,3 @@
     ui = auto
 [commit]
     template=~/.gitmessage
-[credential]
-    helper = manager
-[user]
-    name = Jonas Kaerts
-    email = jonaskaerts@gmail.com
