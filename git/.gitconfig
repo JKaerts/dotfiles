@@ -43,3 +43,5 @@
     ui = auto
 [commit]
     template=~/.gitmessage
+[core]
+	autocrlf = true
