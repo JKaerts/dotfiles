@@ -1,5 +1,15 @@
 #!/bin/bash
 
+deploy_bash() {
+	for file in '.bash_profile' '.bashrc';
+	do
+		if [ -f ~/$file ]; then
+			rm ~/$file;
+		fi;
+		cp ./bash/$file ~/$file
+	done;
+}
+
 deploy_emacs() {
 	for file in 'init.el' 'default-changes.el';
 	do
@@ -10,4 +20,5 @@ deploy_emacs() {
 	done;
 }
 
+deploy_bash
 deploy_emacs
