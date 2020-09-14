@@ -20,5 +20,16 @@ deploy_emacs() {
 	done;
 }
 
+deploy_git() {
+		for file in '.gitconfig' '.gitmessage';
+	do
+		if [ -f ~/$file ]; then
+			rm ~/$file;
+		fi;
+		cp ./git/$file ~/$file
+	done;
+}
+
 deploy_bash
 deploy_emacs
+deploy_git
