@@ -1,7 +1,3 @@
-git-win :
-	cmd.exe /C "mklink /H %HOME%\.gitconfig git\.gitconfig"
-	cmd.exe /C "mklink /H %HOME%\.gitmessage git\.gitmessage"
-
 cygwin-win :
 	cmd.exe /C "mklink /H %HOME%\.minttyrc cygwin\.minttyrc"
 
