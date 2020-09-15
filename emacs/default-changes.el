@@ -9,7 +9,7 @@
 ; Delete trailing whitespace every time a buffer is saved
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
-;Treat CamelCaseSubWords as separate words in every programming mode.
+; Treat CamelCaseSubWords as separate words in every programming mode.
 (add-hook 'prog-mode-hook 'subword-mode)
 
 ; Don't assume that sentences should have two spaces after a full stop
@@ -38,7 +38,9 @@
 (setq backup-directory-alist `(("." . "~/emacs_backups")))
 (setq backup-by-copying t)
 
-; custom-set-variables should not clog the init file. This way all these statements are sent to their own file (which is never included in init.el but it doesnt know that).
+; custom-set-variables should not clog the init file. This way all
+; these statements are sent to their own file (which is never included
+; in init.el but it doesnt know that).
 (setq custom-file (concat user-emacs-directory "/custom.el"))
 
 ; Set utf-8 as the default coding system
