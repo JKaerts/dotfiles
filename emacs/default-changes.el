@@ -41,6 +41,10 @@
 ; custom-set-variables should not clog the init file. This way all these statements are sent to their own file (which is never included in init.el but it doesnt know that).
 (setq custom-file (concat user-emacs-directory "/custom.el"))
 
+; Set utf-8 as the default coding system
+(prefer-coding-system 'utf-8)
+
+
 ; Make <home> and <end> move point to the beginning and end of the
 ; line, respectively.
 (global-set-key (kbd "<home>") 'move-beginning-of-line)
