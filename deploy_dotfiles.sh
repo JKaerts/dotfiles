@@ -35,12 +35,7 @@ deploy_git() {
 }
 
 deploy_vim() {
-	# copy .vimrc
 	cp ./vim/.vimrc ~/.vimrc
-	# make colors directory if it doesn't exist and copy theme
-	if [ ! -d ~/.vim/colors ]; then
-		mkdir -p ~/.vim/colors
-	cp ./vim/colors/solarized.vim ~/.vim/colors/solarized.vim
 }
 
 deploy_bash
