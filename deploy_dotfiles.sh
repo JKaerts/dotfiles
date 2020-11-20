@@ -10,10 +10,6 @@ deploy_bash() {
 	done;
 }
 
-deploy_cygwin() {
-	cp ./cygwin/.minttyrc ~/.minttyrc
-}
-
 deploy_emacs() {
 	for file in 'init.el' 'default-changes.el';
 	do
@@ -39,7 +35,6 @@ deploy_vim() {
 }
 
 deploy_bash
-deploy_cygwin
 deploy_emacs
 deploy_git
 deploy_vim
