@@ -1,47 +1,9 @@
-[alias]
-    nevermind = !git reset --hard HEAD && git clean -d -f
-    save = commit -m
-    resave = commit --amend
-    invert = revert
-    last = log -1 HEAD --format=format:"%Cred%H"
-    summary = status -u -s
-    branchout = checkout -b
-    prestage = diff -w --word-diff=color
-    precommit = diff --cached -w --word-diff=color --word-diff-regex='[^[:space:]<>]+'
-    move = mv
-    remove = rm
-    unmerged = branch --no-merged
-    what = show -w
-    untrack = rm -r --cached
-    rewrite = rebase -i
-    back = checkout "-"
-    contributors = shortlog -s -n
-    filetrail = log --follow -p -w
-    mergetrail = log --ancestry-path --merges
-    unmerged = diff --name-only --diff-filter=U
-    
-    # listing things
-    branches = branch -a
-    remotes = remote -v
-    stashes = stash list
-    tags = tag
-    
-    # undoing things
-    amend = commit --amend
-    discard = checkout --
-    uncommit = reset --mixed HEAD~
-    unstage = reset -q HEAD --
-    unstash = stash pop
-    
-    # logging
-    graph = log --graph -10 --branches --remotes --tags  --format=format:'%Cgreen%h %Creset• %<(75,trunc)%s (%cN, %ar) %Cred%d' --date-order
-    history = log -10 --format=format:'%Cgreen%h %Creset• %s (%cN, %ar)'
-    
-    # workflow
-    interactive = add -i
-[color]
-    ui = auto
 [commit]
-    template=~/.gitmessage
+	# I use a custom template when writing my commit messages.
+	# This reminds me of all info that needs to be present
+	# in a good commit message.
+    template = ~/.gitmessage
 [core]
+	# Store line endings internally as LF but convert to
+	# CRLF when inside the working directory.
 	autocrlf = true
