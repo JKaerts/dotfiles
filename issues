@@ -1,8 +1,3 @@
-# 02 - Move emacs config to org-mode
-
-Since emacs comes with its own environment for literate programming, we should
-use this.
-
 # 01 - Restructure git config
 
 - Less aliases
