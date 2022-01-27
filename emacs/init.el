@@ -1,2 +1,1 @@
-; Make some changes to emacs default behaviour
-(load-file "~/.emacs.d/default-changes.el")
+(org-babel-load-file "~/.emacs.d/configuration.org")

@@ -1,0 +1,94 @@
+* Changes to default emacs
+
+When opening a file, start searching from the user's home directory.
+
+#+begin_src emacs-lisp
+(setq default-directory "~/")
+#+end_src
+
+Allow 20MB of memory (instead of 0.76MB) before calling garbage collection. This
+means GC runs less often, which speeds up some
+operations.
+
+#+begin_src emacs-lisp
+(setq gc-cons-threshold 20000000)
+#+end_src
+
+Delete trailing whitespace every time a buffer is saved.
+
+#+begin_src emacs-lisp
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+#+end_src
+
+Treat CamelCaseSubWords as separate words in every programming mode.
+
+#+begin_src emacs-lisp
+(add-hook 'prog-mode-hook 'subword-mode)
+#+end_src
+
+Don't assume that sentences should have two spaces after a full stop.
+
+#+begin_src emacs-lisp
+(setq sentence-end-double-space nil)
+#+end_src
+
+If some text is selected, and you type some text, delete the selected text and
+start inserting your typed text.
+
+#+begin_src emacs-lisp
+(delete-selection-mode t)
+#+end_src
+
+If you save a file that doesn't end with a newline, automatically append one.
+
+#+begin_src emacs-lisp
+(setq require-final-newline t)
+#+end_src
+
+Ask if you're sure that you want to close Emacs.
+
+#+begin_src emacs-lisp
+(setq confirm-kill-emacs 'y-or-n-p)
+#+end_src
+
+Add file sizes in human-readable units (KB, MB, etc) to dired buffers.
+
+#+begin_src emacs-lisp
+(setq-default dired-listing-switches "-alh")
+#+end_src
+
+When something changes a file, automatically refresh the buffercontaining that
+file so they can't get out of sync.
+
+#+begin_src emacs-lisp
+(global-auto-revert-mode t)
+#+end_src
+
+Let's copy the backup files to their own folder.
+
+#+begin_src emacs-lisp
+(setq backup-directory-alist `(("." . "~/emacs_backups")))
+(setq backup-by-copying t)
+#+end_src
+
+custom-set-variables should not clog the init file. This way all these
+statements are sent to their own file (which is never included in init.el but it
+doesnt know that).
+
+#+begin_src emacs-lisp
+(setq custom-file (concat user-emacs-directory "/custom.el"))
+#+end_src
+
+Set utf-8 as the default coding system.
+
+#+begin_src emacs-lisp
+(prefer-coding-system 'utf-8)
+#+end_src
+
+Make <home> and <end> move point to the beginning and end of the line,
+respectively.
+
+#+begin_src emacs-lisp
+(global-set-key (kbd "<home>") 'move-beginning-of-line)
+(global-set-key (kbd "<end>") 'move-end-of-line)
+#+end_src
