@@ -102,3 +102,17 @@ respectively.
 (global-set-key (kbd "<home>") 'move-beginning-of-line)
 (global-set-key (kbd "<end>") 'move-end-of-line)
 #+end_src
+
+* Org-mode
+
+My tasks have the following possible states:
+- TODO: a task that needs to be done
+- DONE: a task that is completed
+- CANCELLED: a task that was once on my plat but is no longer relevant
+- WAITING: a task where I need to wait for another person's input
+- POSTPONED: a task that is postponed to a later date
+
+#+begin_src emacs-lisp
+  (setq org-todo-keywords
+	'((sequence "TODO" "WAITING" "|" "DONE" "CANCELLED" "POSTPONED")))
+#+end_src
