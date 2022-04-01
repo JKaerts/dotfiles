@@ -8,29 +8,6 @@
 (package-initialize)
 #+end_src
 
-* Install =use-package= if necessary and configure it
-
-With =use-package=, all package config can be easily managed. This code makes
-sure that =use-package= is installed if not already
-
-#+begin_src emacs-lisp
-  (when (not (package-installed-p 'use-package))
-    (package-refresh-contents)
-    (package-install 'use-package))
-
-  (require 'use-package-ensure)
-  (setq use-package-always-ensure t)
-#+end_src
-
-Always compile packages, and use the newest version available.
-
-#+begin_src emacs-lisp
-  (use-package auto-compile
-    :config (auto-compile-on-load-mode))
-
-  (setq load-prefer-newer t)
-#+end_src
-
 * Changes to default emacs
 
 When opening a file, start searching from the user's home directory.
@@ -124,15 +101,4 @@ respectively.
 #+begin_src emacs-lisp
 (global-set-key (kbd "<home>") 'move-beginning-of-line)
 (global-set-key (kbd "<end>") 'move-end-of-line)
-#+end_src
-
-* Magit
-
-Use =magit= to handle version control. A tweak I make to the default behaviour
-is to highlight commit text in the summary line that goes beyond 50 characters.
-
-#+begin_src emacs-lisp
-  (use-package magit
-	       :config
-	       (setq git-commit-summary-line-max-length 50))
 #+end_src
