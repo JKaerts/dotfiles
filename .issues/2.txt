@@ -1,4 +1,7 @@
-# 02 - Move emacs config to org-mode
-
+ticket: 2
+responsible:jonas
+status:closed
+title: Move emacs config to org-mode
+----
 Since emacs comes with its own environment for literate programming, we should
 use this.

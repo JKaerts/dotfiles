@@ -1,0 +1,10 @@
+ticket: 1
+responsible:jonas
+status:open
+title: Restructure git config
+----
+The git config needs some streamlining:
+
+- Less aliases
+- Alphabetise sections
+- Read through docs of core config for essential settings
